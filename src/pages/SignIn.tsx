@@ -32,14 +32,14 @@ function SignIn({navigation}: SignInScreenProps) {
       .catch(error => console.log(error));
   }, []);
  */
-  useEffect(() => {
+  /*   useEffect(() => {
     axios
       .get(`${Config.API_URL}/api/hello`)
       .then(response => setHello(response.data))
       .catch(error => console.log(error));
   }, []);
   console.log('에러띄워보라고');
-  console.log(hello);
+  console.log(hello); */
 
   const onChangeEmail = useCallback(text => {
     setEmail(text.trim());
