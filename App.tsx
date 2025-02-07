@@ -9,6 +9,7 @@ import MyPage from './src/pages/Mypage';
 import {useState} from 'react';
 import SignIn from './src/pages/SignIn';
 import SignUp from './src/pages/SignUp';
+import {View} from 'react-native';
 
 export type LoggedInParamList = {
   Orders: undefined;
