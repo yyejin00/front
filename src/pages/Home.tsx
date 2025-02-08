@@ -1,10 +1,19 @@
 import React from 'react';
-import {View, Text} from 'react-native';
+import {View, Text, StatusBar, ScrollView} from 'react-native';
+import { SafeAreaView } from 'react-native-safe-area-context';
+import SearchInput from '../components/SearchInput';
+import Hotpost from '../components/Hotpost';
+import PostItem from '../components/PostItem';
+import Posts from '../components/Posts';
 const Home = () => {
   return (
-    <View>
-      <Text>home Main Screen</Text>
-    </View>
+    <SafeAreaView>
+      <SearchInput />
+      <ScrollView>
+        <Hotpost />
+        <Posts />
+      </ScrollView>
+    </SafeAreaView>
   );
 };
 export default Home;
