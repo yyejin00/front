@@ -9,22 +9,9 @@ import MyPage from './src/pages/Mypage';
 import {useState} from 'react';
 import SignIn from './src/pages/SignIn';
 import SignUp from './src/pages/SignUp';
-import {View} from 'react-native';
-
-export type LoggedInParamList = {
-  Orders: undefined;
-  Settings: undefined;
-  Delivery: undefined;
-  Complete: {orderId: string};
-};
-
-export type RootStackParamList = {
-  SignIn: undefined;
-  SignUp: undefined;
-};
 
 const Tab = createBottomTabNavigator();
-const Stack = createNativeStackNavigator<RootStackParamList>();
+const Stack = createNativeStackNavigator();
 
 function App() {
   const [isLoggedIn, setLoggedIn] = useState(true);
@@ -40,7 +27,7 @@ function App() {
           <Tab.Screen
             name="Kiwwoomee"
             component={Kiwwoomee}
-            options={{title: '내 키우미'}}
+            options={{headerShown: false}}
           />
           <Tab.Screen
             name="PlantBook"
