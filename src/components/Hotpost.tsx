@@ -32,11 +32,14 @@ const postInfo = [
 ]
 
 const styles = StyleSheet.create({
+    /* Hot 게시글 Style */
     titleText: {
         paddingLeft: 5,
         color: 'black',
         fontWeight: 'bold'
     },
+
+    /* 이미지 틀 */
     imageView: {
         width: 100,
         height: 100,
@@ -45,6 +48,7 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
     },
+
     image: {
         resizeMode: 'cover',
         width: '100%',
@@ -52,6 +56,8 @@ const styles = StyleSheet.create({
         borderRadius: 5,
         backgroundColor: 'orange',
     },
+
+    /* Hot 게시글 제목 */
     hotpostText: {
         color: 'black',
         fontSize: 10,

@@ -58,12 +58,16 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     borderRadius: 10,
     paddingHorizontal: 20,
+  },
+
+  BigView: {
+    marginBottom: 50,
   }
 })
 
 const Posts = () => {
   return (
-    <View>
+    <View style={styles.BigView}>
       <View style={styles.View} >
         <TextInput placeholder='카테고리 검색' style={styles.TextInput} />
       </View>
