@@ -34,7 +34,7 @@ const styles = StyleSheet.create({
         padding: 10,
         width: 50,
     }
-})
+});
 
 const PostItem = ({ data }) => {
     const [like, setLike] = useState(data.isLiked);

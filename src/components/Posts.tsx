@@ -1,6 +1,7 @@
 import { View, Text, TextInput, StyleSheet } from 'react-native';
 import React from 'react';
 import PostItem from './PostItem';
+import TradePost from './TradePost';
 
 const postsInfo = [
   {
@@ -8,35 +9,29 @@ const postsInfo = [
     postPersonImage: require('../../assets/images/userProfile.jpeg'),
     postImage: require('../../assets/images/post1.jpeg'),
     likes: 765,
-    isLinked: true,
   },
   {
     postTitle: 'Lee',
     postPersonImage: require('../../assets/images/profile5.jpeg'),
     postImage: require('../../assets/images/post2.jpeg'),
     likes: 333,
-    isLinked: false,
   },
+];
+
+const tradeInfo = [
   {
-    postTitle: 'Park',
-    postPersonImage: require('../../assets/images/profile4.jpeg'),
+    postTitle: 'Trading 1',
+    postPersonImage: require('../../assets/images/profile1.jpeg'),
     postImage: require('../../assets/images/post3.jpeg'),
-    likes: 123,
-    isLinked: false,
+    likes: 3,
+    price: 20000,
   },
   {
-    postTitle: 'Jeong',
-    postPersonImage: require('../../assets/images/profile3.jpeg'),
-    postImage: require('../../assets/images/post4.jpeg'),
-    likes: 777,
-    isLinked: false,
-  },
-  {
-    postTitle: 'Choi',
+    postTitle: 'Trading 2',
     postPersonImage: require('../../assets/images/profile2.jpeg'),
-    postImage: require('../../assets/images/post5.jpeg'),
-    likes: 58,
-    isLinked: true,
+    postImage: require('../../assets/images/post4.jpeg'),
+    likes: 5,
+    price: 30000,
   },
 ];
 
@@ -76,6 +71,13 @@ const Posts = () => {
           <View>
             <PostItem key={index} data={data} />
           </View>  
+        )
+      })}
+      {tradeInfo.map((data, index) => {
+        return (
+          <View>
+            <TradePost key={index} data={data} />
+          </View>
         )
       })}
     </View>
