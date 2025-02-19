@@ -2,6 +2,7 @@ import { View, Text, TextInput, StyleSheet } from 'react-native';
 import React from 'react';
 import PostItem from './PostItem';
 import TradePost from './TradePost';
+import AdminPost from './AdminPost';
 
 const postsInfo = [
   {
@@ -70,6 +71,7 @@ const Posts = () => {
         return (
           <View>
             <PostItem key={index} data={data} />
+            <AdminPost key={index} data={data} />
           </View>  
         )
       })}
