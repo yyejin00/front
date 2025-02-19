@@ -5,6 +5,8 @@ import SearchInput from '../components/SearchInput';
 import Hotpost from '../components/Hotpost';
 import PostItem from '../components/PostItem';
 import Posts from '../components/Posts';
+import FloatButton from '../components/FloatButton';
+
 const Home = () => {
   return (
     <SafeAreaView>
@@ -13,6 +15,7 @@ const Home = () => {
         <Hotpost />
         <Posts />
       </ScrollView>
+      <FloatButton />
     </SafeAreaView>
   );
 };

@@ -1,5 +1,6 @@
 import React from 'react';
 import {View, Text} from 'react-native';
+
 const PostUpload = () => {
   return (
     <View>
@@ -7,4 +8,5 @@ const PostUpload = () => {
     </View>
   );
 };
+
 export default PostUpload;

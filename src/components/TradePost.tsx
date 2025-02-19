@@ -33,10 +33,19 @@ const styles = StyleSheet.create({
         borderRadius: 10,
         padding: 10,
         width: 50,
+    },
+
+    chatButton: {
+        backgroundColor:'black',
+        justifyContent: 'flex-end',
+        padding: 10,
+        borderRadius: 10,
+        fontSize: 10,
+        color: 'white',
     }
 });
 
-const TradePost = ({ data }) => {
+const TradePost = ({ data, navigation }) => {
   const [like, setLike] = useState(data.isLiked);
       return (
           <View style={styles.BiggestView}>
@@ -82,15 +91,8 @@ const TradePost = ({ data }) => {
                             {like ? data.likes + 1 : data.likes}
                         </Text>
                     </TouchableOpacity>
-                    <TouchableOpacity>
-                        <Text style={{
-                            backgroundColor:'black',
-                            justifyContent: 'flex-end',
-                            padding: 10,
-                            borderRadius: 10,
-                            fontSize: 10,
-                            color: 'white',
-                        }}>
+                    <TouchableOpacity onPress={() => navigation.navigation('Chat')} >
+                        <Text style={styles.chatButton}>
                             채팅하기
                         </Text>
                     </TouchableOpacity>
