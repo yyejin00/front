@@ -11,8 +11,7 @@ import {
 import React, {useState} from 'react';
 import DropDownPicker from 'react-native-dropdown-picker';
 import CustomButton from '../components/CustomButton';
-import {isEnabled} from 'react-native/Libraries/Performance/Systrace';
-
+import {useNavigation} from '@react-navigation/native';
 const PlantNew = () => {
   const [open, setOpen] = useState(false);
   const [value, setValue] = useState(null);
@@ -28,6 +27,8 @@ const PlantNew = () => {
   const toggleSwitch = () => {
     setIsEnabled(!isEnabled);
   };
+
+  const navigation = useNavigation();
   return (
     <View style={styles.plantNewContainer}>
       <ScrollView style={styles.scroll}>
@@ -76,12 +77,21 @@ const PlantNew = () => {
         <View style={styles.container}>
           <Text style={styles.plantTitle}>사진첨부</Text>
           <View style={styles.buttonzone}>
-            <CustomButton text={'사진첨부'} type={'Default'} />
+            <CustomButton
+              text={'사진첨부'}
+              type={'Default'}
+              onPress={() => navigation.navigate('PhotoModal')}
+            />
           </View>
         </View>
       </ScrollView>
       <View>
-        <CustomButton text={'등록하기'} type={'Default'} />
+        <CustomButton
+          text={'등록하기'}
+          type={'Default'}
+          onPress={() => navigation.push()}
+          /*onPress={()=>navigation.push('KiwoomMain',state 값)}*/
+        />
       </View>
     </View>
   );

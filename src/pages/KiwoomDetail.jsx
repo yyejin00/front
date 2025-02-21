@@ -8,13 +8,14 @@ import {
 } from 'react-native';
 import React, {useState} from 'react';
 import {Calendar, CalendarList, Agenda} from 'react-native-calendars';
+import CustomButton from '../components/CustomButton';
 //물준 날짜를 어떻게 표시해야하낭
 const PlantDetail = ({name, image, onalarm, waterDate}) => {
   const img = 'https://cdn.imweb.me/thumbnail/20210208/ae9e5d4ddb7a7.png';
   const [selected, setSelected] = useState('');
   const [alarm, setAlarm] = useState(false);
   const onAlarm = () => setAlarm(!alarm);
-
+  //<CustomButton text={'수정하기'} type={'Default'} />
   return (
     <View style={styles.container}>
       <ScrollView>
@@ -41,7 +42,10 @@ const PlantDetail = ({name, image, onalarm, waterDate}) => {
           <Text style={styles.text}>7 일에 한 번씩 화요일에 물주기</Text>
         </View>
         <View style={styles.calendarContainer}>
-          <Text>사진으로 기록하기</Text>
+          <View style={styles.titleContainer}>
+            <Text>사진으로 기록하기</Text>
+            <CustomButton text={'사진추가'} type={'Default'} />
+          </View>
           <Calendar
             onDayPress={day => {
               setSelected(day.dateString);
