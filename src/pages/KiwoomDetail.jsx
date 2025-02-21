@@ -44,7 +44,7 @@ const PlantDetail = ({name, image, onalarm, waterDate}) => {
         <View style={styles.calendarContainer}>
           <View style={styles.titleContainer}>
             <Text>사진으로 기록하기</Text>
-            <CustomButton text={'사진추가'} type={'Default'} />
+            <CustomButton text={'사진추가'} type={''} />
           </View>
           <Calendar
             onDayPress={day => {
