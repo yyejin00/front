@@ -10,7 +10,7 @@ import {
 } from 'react-native';
 import {NativeStackScreenProps} from '@react-navigation/native-stack';
 import {RootStackParamList} from '../../App';
-import DismissKeyboardView from '../components/DismisKeyboardView';
+import DismissKeyboardView from '../../components/DismisKeyboardView';
 import axios from 'axios';
 import Config from 'react-native-config';
 /* import React = require('react');a

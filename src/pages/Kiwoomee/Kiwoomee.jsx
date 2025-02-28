@@ -1,8 +1,8 @@
 import React, {useCallback, useReducer, useRef} from 'react';
 import {View, Text, StyleSheet, FlatList, ScrollView} from 'react-native';
-import CustomButton from '../components/CustomButton';
+import CustomButton from '../../components/CustomButton';
 import {SafeAreaView} from 'react-native-safe-area-context';
-import KiwoomeeCard from '../components/KiwoomeeCard';
+import KiwoomeeCard from '../../components/KiwoomeeCard';
 const mockData = [
   {
     id: 0,
@@ -67,7 +67,7 @@ function reducer(state, action) {
       return state;
   }
 }
-const Main = ({navigation}) => {
+const Kiwoomee = ({navigation}) => {
   const [kiwoomee, dispatch] = useReducer(reducer, mockData);
   const idRef = useRef(6);
 
@@ -143,4 +143,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Main;
+export default Kiwoomee;

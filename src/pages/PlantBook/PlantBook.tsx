@@ -1,20 +1,21 @@
 import React from 'react';
 import {View, Text, TextInput, StyleSheet} from 'react-native';
-import HotPlant from '../components/HotPlant';
+import HotPlant from '../../components/HotPlant';
 
 const PlantBook = () => {
   return (
     <View>
       <View style={styles.container}>
-        <Text style={styles.TitleText}>
-          식 물 도 감
-        </Text>
+        <Text style={styles.TitleText}>식 물 도 감</Text>
         <View style={styles.InputContainer}>
-          <TextInput placeholder='찾으려는 식물 이름' style={styles.TextInput} />
+          <TextInput
+            placeholder="찾으려는 식물 이름"
+            style={styles.TextInput}
+          />
         </View>
       </View>
       <View style={styles.HotPlant}>
-          <HotPlant />
+        <HotPlant />
       </View>
     </View>
   );

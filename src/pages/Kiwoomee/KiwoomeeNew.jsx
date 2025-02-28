@@ -10,9 +10,9 @@ import {
 } from 'react-native';
 import React, {useState} from 'react';
 import DropDownPicker from 'react-native-dropdown-picker';
-import CustomButton from '../components/CustomButton';
+import CustomButton from '../../components/CustomButton';
 import {useNavigation} from '@react-navigation/native';
-const PlantNew = () => {
+const KiwoomeeNew = () => {
   const [open, setOpen] = useState(false);
   const [value, setValue] = useState(null);
   const [items, setItems] = useState([
@@ -80,7 +80,7 @@ const PlantNew = () => {
             <CustomButton
               text={'사진첨부'}
               type={'Default'}
-              onPress={() => navigation.navigate('PhotoModal')}
+              /*onPress={() => navigation.navigate('PhotoModal')}*/
             />
           </View>
         </View>
@@ -125,4 +125,4 @@ const styles = StyleSheet.create({
   false: {backgroundColor: '#cacaca', fontcolor: 'gray'},
   buttonzone: {width: 120, height: 40},
 });
-export default PlantNew;
+export default KiwoomeeNew;

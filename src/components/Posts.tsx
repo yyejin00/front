@@ -1,4 +1,4 @@
-import { View, Text, TextInput, StyleSheet } from 'react-native';
+import {View, Text, TextInput, StyleSheet} from 'react-native';
 import React from 'react';
 import PostItem from './PostItem';
 import TradePost from './TradePost';
@@ -58,32 +58,32 @@ const styles = StyleSheet.create({
 
   BigView: {
     marginBottom: 50,
-  }
-})
+  },
+});
 
 const Posts = () => {
   return (
     <View style={styles.BigView}>
-      <View style={styles.View} >
-        <TextInput placeholder='카테고리 검색' style={styles.TextInput} />
+      <View style={styles.View}>
+        <TextInput placeholder="카테고리 검색" style={styles.TextInput} />
       </View>
       {postsInfo.map((data, index) => {
         return (
           <View>
             <PostItem key={index} data={data} />
             <AdminPost key={index} data={data} />
-          </View>  
-        )
+          </View>
+        );
       })}
       {tradeInfo.map((data, index) => {
         return (
           <View>
             <TradePost key={index} data={data} />
           </View>
-        )
+        );
       })}
     </View>
-  )
-}
+  );
+};
 
 export default Posts;
