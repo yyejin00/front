@@ -15,8 +15,9 @@ const PlantBook = () => {
         </View>
       </View>
       <View style={styles.HotPlant}>
-        <HotPlant />
-      </View>
+
+          <HotPlant />
+      </View> 
     </View>
   );
 };

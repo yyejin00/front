@@ -8,9 +8,9 @@ import {
 } from 'react-native';
 import React, {useState} from 'react';
 import {Calendar, CalendarList, Agenda} from 'react-native-calendars';
-import CustomButton from '../components/CustomButton';
+import CustomButton from '../../components/CustomButton';
 //물준 날짜를 어떻게 표시해야하낭
-const PlantDetail = ({name, image, onalarm, waterDate}) => {
+const KiwoomeeDetail = ({name, image, onalarm, waterDate}) => {
   const img = 'https://cdn.imweb.me/thumbnail/20210208/ae9e5d4ddb7a7.png';
   const [selected, setSelected] = useState('');
   const [alarm, setAlarm] = useState(false);
@@ -44,7 +44,7 @@ const PlantDetail = ({name, image, onalarm, waterDate}) => {
         <View style={styles.calendarContainer}>
           <View style={styles.titleContainer}>
             <Text>사진으로 기록하기</Text>
-            <CustomButton text={'사진추가'} type={''} />
+            <CustomButton text={'사진추가'} type={'Default'} />
           </View>
           <Calendar
             onDayPress={day => {
@@ -84,4 +84,4 @@ const styles = StyleSheet.create({
   calendarContainer: {margin: 10},
 });
 
-export default PlantDetail;
+export default KiwoomeeDetail;

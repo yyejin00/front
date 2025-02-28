@@ -1,6 +1,6 @@
 import React from 'react';
 import {View, Text, StatusBar, ScrollView} from 'react-native';
-import { SafeAreaView } from 'react-native-safe-area-context';
+import {SafeAreaView} from 'react-native-safe-area-context';
 import SearchInput from '../components/SearchInput';
 import Hotpost from '../components/Hotpost';
 import PostItem from '../components/PostItem';

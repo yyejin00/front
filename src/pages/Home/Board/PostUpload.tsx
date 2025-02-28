@@ -1,10 +1,12 @@
 import React from 'react';
 import {View, Text} from 'react-native';
-const MyPage = () => {
+
+const PostUpload = () => {
   return (
     <View>
-      <Text>MyPage Screen</Text>
+      <Text>postupload Screen</Text>
     </View>
   );
 };
-export default MyPage;
+
+export default PostUpload;
