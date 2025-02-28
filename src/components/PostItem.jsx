@@ -33,7 +33,7 @@ const styles = StyleSheet.create({
         borderRadius: 10,
         padding: 10,
         width: 50,
-    }
+    },
 });
 
 const PostItem = ({ data }) => {

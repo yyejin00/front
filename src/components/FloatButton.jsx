@@ -1,16 +1,20 @@
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 import React from 'react';
-import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { useNavigation } from '@react-navigation/native';
 
-const FloatButton = ({ navigation }) => {
-    return (
-        <View style={styles.container}>
-            <TouchableOpacity style={styles.fab} onPress={() => navigation.navigate('PostUpload')}>
-                <Text style={styles.fabText}>+</Text>
-            </TouchableOpacity>
-        </View>
-    );
+const FloatButton = () => {
+  const navigation = useNavigation();
+
+  return (
+    <View style={styles.container}>
+      <TouchableOpacity
+        style={styles.button}
+        onPress={() => navigation.navigate('PostUpload')}
+      >
+        <Text style={styles.fabText}>+</Text>
+      </TouchableOpacity>
+    </View>
+  );
 };
 
 const styles = StyleSheet.create({
@@ -20,7 +24,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
       },
 
-      fab: {
+      button: {
         position: 'absolute',
         right: 20,
         bottom: 80,
