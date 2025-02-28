@@ -17,6 +17,6 @@ const Home = () => {
       </ScrollView>
       <FloatButton />
     </SafeAreaView>
-  );
+  ); 
 };
 export default Home;
