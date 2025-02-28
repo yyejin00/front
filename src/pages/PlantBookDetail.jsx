@@ -1,12 +1,23 @@
 import React from 'react';
-import {View, Text} from 'react-native';
+import {View, Text, ScrollView, StyleSheet} from 'react-native';
+import SearchInput from '../components/SearchInput';
 
 const PlantBookDetail = () => {
   return (
-    <View>
-      <Text>PlantDetail Screen</Text>
+    <View style={styles.container}>
+      <SearchInput />
+      <ScrollView>
+         
+      </ScrollView>
     </View>
+    
   );
 };
+
+const styles = StyleSheet.create({
+  container: {
+
+  }
+})
 
 export default PlantBookDetail;
