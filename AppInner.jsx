@@ -1,13 +1,13 @@
 import * as React from 'react';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
-import Home from './src/pages/Home';
 import Kiwwoomee from './src/pages/Kiwoomee';
-import PlantBook from './src/pages/PlantBook';
 import MyPage from './src/pages/Mypage';
 import SignIn from './src/pages/SignIn';
 import SignUp from './src/pages/SignUp';
 import {useSelector} from 'react-redux';
+import PlantStack from './src/components/PlantStack';
+import PostStack from './src/components/PostStack';
 
 const Tab = createBottomTabNavigator();
 const Stack = createNativeStackNavigator();
@@ -17,7 +17,11 @@ function AppInner() {
   const isLoggedIn = useSelector(state => !state.user.email);
   return isLoggedIn ? (
     <Tab.Navigator>
-      <Tab.Screen name="Home" component={Home} options={{headerShown: false}} />
+      <Tab.Screen
+        name="Home"
+        component={PostStack}
+        options={{headerShown: false}}
+      />
       <Tab.Screen
         name="Kiwwoomee"
         component={Kiwwoomee}
@@ -25,7 +29,7 @@ function AppInner() {
       />
       <Tab.Screen
         name="PlantBook"
-        component={PlantBook}
+        component={PlantStack}
         options={{headerShown: false}}
       />
       <Tab.Screen

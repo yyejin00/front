@@ -1,19 +1,23 @@
 import React from 'react';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import { NavigationContainer } from '@react-navigation/native';
-import PostUpload from './PostUpload';
-import FloatButton from './FloatButton';
+import Home from '../pages/Home';
+import PostUpload from '../pages/PostUpload';
 
 const Stack = createNativeStackNavigator();
 
 function PostStack() {
   return (
-    <NavigationContainer>
       <Stack.Navigator>
-        <Stack.Screen name="PostUpload" component={PostUpload} />
-        <Stack.Screen name='FloatButton' component={FloatButton} />
+        <Stack.Screen
+          name='Home'
+          component={Home}
+          options={{headerShown: false}}
+        />
+        <Stack.Screen
+          name="PostUpload"
+          component={PostUpload}
+        />
       </Stack.Navigator>
-    </NavigationContainer>
   );
 }
 

@@ -1,11 +1,16 @@
 import { View, Text, Image, StyleSheet, Touchable, TouchableOpacity } from 'react-native';
 import React from 'react';
+import { useNavigation } from '@react-navigation/native';
 
-const HotPlant = ({navigate}) => {
+const HotPlant = () => {
+  const navigation = useNavigation();
+
   return (
     <View style={styles.container}>
         <Text style={styles.Title}>추천 식물</Text>
-        <TouchableOpacity onPress={() => navigation.navigate('PlantDetail')}>
+        <TouchableOpacity
+            onPress={() => navigation.navigate('PlantBookDetail')}
+        >
             <View>
                 <View style={styles.TextContainer}>
                     <Image source={require('../../assets/images/userProfile.jpeg')} style={styles.Imgage} />
@@ -14,7 +19,7 @@ const HotPlant = ({navigate}) => {
                             식물 이름
                         </Text>
                         <Text style={styles.Text}>
-                            식물 설명 식물 설명 식물 설명 식물 설명 식물 설명 식물 설명 식물 설명 식물 설명 
+                            식물에 대한 간략한 설명
                         </Text>
                     </View>
                 </View>
